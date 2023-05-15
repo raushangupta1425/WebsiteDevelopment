@@ -48,7 +48,7 @@ button{
     color: #ffffff;
     background-color: red;
     border-radius: 30px;
-    position: sticky;
+    position: fixed;
     right: 5px;
     bottom: 5px;
 }
