@@ -35,7 +35,6 @@ li{
     font-weight: bold;
     padding: 6px;
     margin-inline: 1px;
-    left: 50px;
 }
 li:hover{
     background-color: #43f7f1;
@@ -47,7 +46,7 @@ ul input{
     right: 20px;
     font-size: 20px;
     font-weight: bold;
-    color:  rgb(255, 248, 248);
+    color:  #000000;
     padding: 10px;
 }
 #slider{
@@ -64,6 +63,7 @@ ul input{
     background-color: red;
     border-radius: 5px;
     position: fixed;
+    border: none;
     right: 50px;
     bottom: 50px;
 }
