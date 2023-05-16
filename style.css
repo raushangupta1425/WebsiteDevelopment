@@ -24,13 +24,13 @@
 #signup-dis{
     margin: 10px;
     color: #ffffff;
-    position: fixed;
+    position: absolute;
     right: 20px;
 }
 #login-dis{
     margin: 10px;
     color: #ffffff;
-    position: fixed;
+    position: absolute;
     right: 100px;
 }
 #box-menu{
@@ -56,7 +56,7 @@ li:hover{
     border-radius: 5px;
 }
 form{
-    position: fixed;
+    position: absolute;
     right: 5px;
 }
 input{
