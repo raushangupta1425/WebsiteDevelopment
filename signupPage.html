@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo/logo.png" type="image/x-icon">
+    <title>Login Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #000000, #14AEA8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .formatting{
+            width: 350px;
+            height: 400px;
+            background-color: transparent;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+        #heading{
+            position: relative;
+            left: 130px;
+            top: 0px;
+        }
+        #details{
+            position: relative;
+            left: 40px;
+            top: 80px;
+            font-size: 20px;
+        }
+        .length{
+            width: 250px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        #submit_button{
+            padding:10px; 
+            width: 90px; 
+            background-color: #bdbbbb;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="formatting">
+            <div id="heading"><h1>Login</h1></div>
+            <form>
+                <div id="details">
+                    <h3>Username</h3>
+                    <input class="length" type="text" name="username" placeholder="Enter Username"/><br><br>
+                    <h3>Password</h3>
+                    <input class="length" type="password" name="password" placeholder="Enter Password"/><br><br>
+                    <div><input id="submit_button" type="submit" name="submit" value="Submit"/></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
