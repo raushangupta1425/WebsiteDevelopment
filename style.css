@@ -34,7 +34,7 @@
     padding: 6px;
     margin: 5px;
 }
-a{
+#box-menu a{
     text-decoration: none;
 }
 #box-menu li:hover{
@@ -101,6 +101,14 @@ input{
     right: 0px;
     top: 150px;
     border: none;
+}
+article{
+    width: 850px;
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    left: 230px;
+    text-align: justify;
 }
 @media (min-width: 300px) and (max-width: 412px) {    /* for Samsung Galaxy S20 Ultra 412x915px*/
     #Heading, #box-menu{
