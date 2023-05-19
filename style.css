@@ -48,19 +48,18 @@ form{
     position: absolute;
     right: 5px;
 }
-input{
+#search-btn{
     margin: 5px;
     padding: 3px;
     font-size: 20px;
 } 
-#button{
+#search-box{
     border-radius: 30px;
     border: none;
     width: 190px;
-    display: inline; 
-    font-size: 20px;
+    font-size: 15px;
     color:  #000000;
-    padding: 5px;
+    padding: 8px;
     padding-left: 10px;
 }
 #slider{
@@ -113,13 +112,27 @@ article{
     left: 230px;
     text-align: justify;
 }
-@media (min-width: 300px) and (max-width: 412px) {    /* for Samsung Galaxy S20 Ultra 412x915px*/
-    #Heading, #box-menu{
-        width: 26rem;
+@media only screen and (max-width: 412px) and (max-height:915px) {    /* for Samsung Galaxy S20 Ultra 412x915px*/
+    .container{
+        display: block;
+        /* width: 26rem; */
     }
 }
-@media (min-width: 412px) and (max-width: 820px) {    /* for Tablet 820x1180px*/
-    #Heading, #box-menu{
-        width: 52rem;
+@media only screen and (min-width: 413px) and (max-width: 820px) and (max-height:1000px){    /* for Tablet 820x1180px*/
+    .container{
+        display: block;
+        /* width: 27rem; */
+    }
+}
+@media only screen and (min-width: 820px) and (max-width: 1366px) and (max-height:768px) {    /* for Desktop 820x1366px*/
+    .container{
+        display: block;
+        /* width: 33rem; */
+    }
+}
+@media only screen and (min-width: 1366px) and (max-height:2000px){    /* for WideScreen 1366x...px*/
+    .container{
+        display: block;
+        /* width: 60rem; */
     }
 }
