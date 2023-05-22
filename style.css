@@ -62,6 +62,10 @@ form{
     padding: 8px;
     padding-left: 10px;
     margin-top: 6px;
+    background-image: url(Logo/searchlogo.png);
+}
+form>i{
+    padding-left: 20px;
 }
 #subscribe{
     padding: 10px;
