@@ -60,9 +60,12 @@ form{
     font-size: 15px;
     color:  #000000;
     padding: 8px;
-    padding-left: 10px;
+    padding-left: 40px;
     margin-top: 6px;
     background-image: url(Logo/searchlogo.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
 }
 form>i{
     padding-left: 20px;
