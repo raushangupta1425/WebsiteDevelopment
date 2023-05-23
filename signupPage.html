@@ -18,50 +18,62 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .container{
+        body{
             width: 100%;
-            height: 130vh;
+            height: auto;
             background-image: linear-gradient(45deg, #000000, #14AEA8);
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .formatting{
-            width: 400px;
+            width: 30%;
             height: 700px;
+            margin: 50px;
             background-color: transparent;
-            border: 2px solid;
             border-radius: 10px;
             box-shadow: 5px 5px 10px ,-5px -5px 10px;
         }
         #heading{
-            position: relative;
-            left: 145px;
-            top: 0px;
+            text-align: center;
         }
         #details{
             position: relative;
-            left: 75px;
+            left: 20%;
             top: 40px;
             font-size: 20px;
         }
         .length{
-            width: 250px;
+            width: 60%;
             padding: 5px;
             border-radius: 5px;
             border: none;
         }
-        #submit_button{
-            padding:10px; 
-            width: 90px; 
+        #submit_btn{
+            padding: 3%; 
+            width: 23%; 
+            font-weight: bold;
             background-color: #bdbbbb;
             border-radius: 5px;
             border: none;
         }
+        @media only screen and (max-width: 425px){
+            .formatting{
+                width: 80%;
+                height: 45em;
+                font-size: 70%;
+            }
+            #details{
+                font-size: 100%;
+            }
+            #submit_btn{
+                font-size: 90%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
         <div class="formatting">
             <div id="heading"><h1>SignUp</h1></div>
             <form>
@@ -80,10 +92,9 @@
                     <input class="length" type="password" name="password" required="required" placeholder="Enter Password"/><br><br>
                     <h3>Confirm Password</h3>
                     <input class="length" type="password" name="password" required="required" placeholder="Enter password again"/><br><br>
-                    <div><input id="submit_button" type="submit" name="submit" value="Register"/></div>
+                    <div><input id="submit_btn" type="submit" name="submit" value="Register"/></div>
                 </div>
             </form>
         </div>
-    </div>
 </body>
 </html>
