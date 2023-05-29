@@ -337,6 +337,30 @@ footer div:nth-child(2){
         display: none;
     }
 }
+/* Responsive coding for small screen laptops*/
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    header{
+        height: 65px;
+    }
+    nav{
+        top: 65px;
+    }
+    #box-menu{
+        justify-content: space-between;
+    }
+    #box-menu li{
+        font-size: 20px;
+        margin: 0;
+        padding: 6px 6px;
+    }
+    .search-box{
+        padding-left: 1%;
+    }
+    .content div{
+        width: 22.1%;
+        height: 130px;
+    }
+}
 /* Responsive coding for wide screen */
 @media only screen and (min-width: 1440px){
     .search-box{
