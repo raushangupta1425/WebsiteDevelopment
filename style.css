@@ -84,23 +84,41 @@ header{
 /* Start css coding for navigation bar */
 nav{
     display: flex;
+    background-color: #14AEA8;
     position: sticky;
     top: 80px;
     z-index: 2;
 }
-.side-menu-bar{
-    display: none;
-    width: 65%;
-    background-color: #14AEA8;
+.nav-bar{
+    display: flex;
 }
-.side-menu-bar img{
-    width: 40px;
-    cursor: pointer;
-    position: relative;
-    left: 10px;
+.fa-bars{
+    display: none;
+    color:#ffffff;
+    font-size: 35px;
+    padding-top: 4px;
+    padding-left: 15px;
+    /* border: 1px solid red; */
 }
 nav a{
     text-decoration: none;
+}
+#box-menu{
+    display: flex;
+    justify-content: space-around;
+}
+#box-menu li{
+    list-style: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 15px;
+    margin: 5px;
+}
+#box-menu li:hover{
+    background-color: #30c9c4;
+    border-radius: 5px;
 }
 .search-box{
     display: flex;
@@ -118,24 +136,6 @@ nav a{
     background-repeat: no-repeat;
     background-position: 10px 7px;
     border: none;
-}
-#box-menu{
-    display: flex;
-    justify-content: space-around;
-    background-color: #14AEA8;
-}
-#box-menu li{
-    list-style: none;
-    font-size: 20px;
-    font-family: sans-serif;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 6px 15px;
-    margin: 5px;
-}
-#box-menu li:hover{
-    background-color: #30c9c4;
-    border-radius: 5px;
 }
 /* End css coding for navigation bar */
 
@@ -225,9 +225,6 @@ footer div:nth-child(2){
     header{
         height: 50px;
     }
-    .side-menu-bar{
-        display: block;
-    }
     .heading{
         padding: 0;
     }
@@ -240,15 +237,20 @@ footer div:nth-child(2){
     nav{
         top: 50px;
     }
-    .nav-bar{
+    .fa-bars{
+        display: block;
+    }
+    #box-menu{
         display: none;
+        flex-direction: column;
+        background-color: #14AEA8;
         width: 10em;
         position: absolute;
         left: 0;
         top: 43px;
     }
-    #box-menu{
-        flex-direction: column;
+    .nav-bar:hover #box-menu{
+        display: block;
     }
     #box-menu li{
         margin: 0;
@@ -256,9 +258,6 @@ footer div:nth-child(2){
     }
     .search-box{
         width: 35%;
-    }
-    .side-menu-bar:hover .nav-bar{
-        display: block;
     }
     .content{
         margin-bottom: 30px;
@@ -289,31 +288,30 @@ footer div:nth-child(2){
     header{
         height: 60px;
     }
-    .side-menu-bar{
-        display: block;
-    }
     .heading{
         padding-left: 0;
     }
     nav{
         top: 60px;
     }
-    .nav-bar{
+    .fa-bars{
+        display: block;
+    }
+    #box-menu{
         display: none;
+        flex-direction: column;
+        background-color: #14AEA8;
         width: 10em;
         position: absolute;
         left: 0;
-        top: 44px;
+        top: 43px;
     }
-    #box-menu{
-        flex-direction: column;
+    .nav-bar:hover #box-menu{
+        display: block;
     }
     #box-menu li{
         margin: 0;
         padding: 0.7em;
-    }
-    .side-menu-bar{
-        width: 75%;
     }
     .search-box{
         width: 25%;
