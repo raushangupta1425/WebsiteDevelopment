@@ -222,6 +222,9 @@ footer div:nth-child(2){
 
 /* Responsive coding for mobile screen */
 @media only screen and (max-width: 425px){
+    .col-10{
+        width: 72%;
+    }
     header{
         height: 50px;
     }
@@ -236,9 +239,11 @@ footer div:nth-child(2){
     }
     nav{
         top: 50px;
+        padding: 2px;
     }
     .fa-bars{
         display: block;
+        padding-top: 0;
     }
     #box-menu{
         display: none;
@@ -247,7 +252,7 @@ footer div:nth-child(2){
         width: 10em;
         position: absolute;
         left: 0;
-        top: 43px;
+        top: 42px;
     }
     .nav-bar:hover #box-menu{
         display: block;
