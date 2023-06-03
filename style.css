@@ -222,9 +222,6 @@ footer div:nth-child(2){
 
 /* Responsive coding for mobile screen */
 @media only screen and (max-width: 425px){
-    .col-10{
-        width: 72%;
-    }
     header{
         height: 50px;
     }
@@ -262,7 +259,7 @@ footer div:nth-child(2){
         padding: 0.7em;
     }
     .search-box{
-        width: 35%;
+        width: 43%;
     }
     .content{
         margin-bottom: 30px;
@@ -320,9 +317,6 @@ footer div:nth-child(2){
     }
     .search-box{
         width: 25%;
-    }
-    .side-menu-bar:hover .nav-bar{
-        display: block;
     }
     .content{
         margin: 0;
