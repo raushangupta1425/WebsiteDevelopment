@@ -116,6 +116,9 @@ nav a{
     padding: 6px 15px;
     margin: 5px;
 }
+.fa-angle-right{
+    display: none;
+}
 #box-menu li:hover{
     background-color: #30c9c4;
     border-radius: 5px;
@@ -136,6 +139,23 @@ nav a{
     background-repeat: no-repeat;
     background-position: 10px 7px;
     border: none;
+}
+#option-btn{
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+#drop-down-menu{
+    display: none;
+    width: 150%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #14AEA8;
+    /* border: 1px solid red; */
+}
+#option-btn:hover #drop-down-menu{
+    display: block;
 }
 /* End css coding for navigation bar */
 
@@ -222,6 +242,9 @@ footer div:nth-child(2){
 
 /* Responsive coding for mobile screen */
 @media only screen and (max-width: 425px){
+    .col-10{
+        width: 72%;
+    }
     header{
         height: 50px;
     }
@@ -258,8 +281,19 @@ footer div:nth-child(2){
         margin: 0;
         padding: 0.7em;
     }
+    .fa-angle-right{
+        display: inline-block;
+    }
+    .fa-angle-down{
+        display: none;
+    }
+    #drop-down-menu{
+        width: 119%;
+        top: 0;
+        left: 159px;
+    }
     .search-box{
-        width: 43%;
+        width: 35%;
     }
     .content{
         margin-bottom: 30px;
@@ -315,8 +349,22 @@ footer div:nth-child(2){
         margin: 0;
         padding: 0.7em;
     }
+    .fa-angle-right{
+        display: inline-block;
+    }
+    .fa-angle-down{
+        display: none;
+    }
+    #drop-down-menu{
+        width: 119%;
+        top: 0;
+        left: 159px;
+    }
     .search-box{
         width: 25%;
+    }
+    .side-menu-bar:hover .nav-bar{
+        display: block;
     }
     .content{
         margin: 0;
