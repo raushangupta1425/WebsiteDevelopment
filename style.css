@@ -242,9 +242,6 @@ footer div:nth-child(2){
 
 /* Responsive coding for mobile screen */
 @media only screen and (max-width: 425px){
-    .col-10{
-        width: 72%;
-    }
     header{
         height: 50px;
     }
@@ -269,12 +266,12 @@ footer div:nth-child(2){
         display: none;
         flex-direction: column;
         background-color: #14AEA8;
-        width: 10em;
+        width: 4.6em;
         position: absolute;
         left: 0;
         top: 42px;
     }
-    .nav-bar:hover #box-menu{
+    .nav-bar i:hover #box-menu{
         display: block;
     }
     #box-menu li{
@@ -293,7 +290,7 @@ footer div:nth-child(2){
         left: 159px;
     }
     .search-box{
-        width: 38%;
+        width: 42%;
     }
     .content{
         margin-bottom: 30px;
@@ -337,12 +334,12 @@ footer div:nth-child(2){
         display: none;
         flex-direction: column;
         background-color: #14AEA8;
-        width: 10em;
+        width: 4.6em;
         position: absolute;
         left: 0;
         top: 43px;
     }
-    .nav-bar:hover #box-menu{
+    .nav-bar i:hover #box-menu{
         display: block;
     }
     #box-menu li{
@@ -362,9 +359,6 @@ footer div:nth-child(2){
     }
     .search-box{
         width: 25%;
-    }
-    .side-menu-bar:hover .nav-bar{
-        display: block;
     }
     .content{
         margin: 0;
