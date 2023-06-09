@@ -266,12 +266,12 @@ footer div:nth-child(2){
         display: none;
         flex-direction: column;
         background-color: #14AEA8;
-        width: 4.6em;
+        width: 10em;
         position: absolute;
         left: 0;
         top: 42px;
     }
-    .nav-bar i:hover #box-menu{
+    .nav-bar:hover #box-menu{
         display: block;
     }
     #box-menu li{
@@ -334,12 +334,12 @@ footer div:nth-child(2){
         display: none;
         flex-direction: column;
         background-color: #14AEA8;
-        width: 4.6em;
+        width: 10em;
         position: absolute;
         left: 0;
         top: 43px;
     }
-    .nav-bar i:hover #box-menu{
+    .nav-bar:hover #box-menu{
         display: block;
     }
     #box-menu li{
