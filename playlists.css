@@ -1,0 +1,37 @@
+section{
+    height: 100vh;
+}
+fieldset{
+    width: 100%;
+    border-color: #000000;
+    /* border: none; */
+    margin: 30px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+legend{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+fieldset div{
+    width: 24%;
+    height: fit-content;
+    margin: 5px;
+    /* border: 1px solid #b11010; */
+}
+fieldset img{
+    width: 100%;
+}
+/* Responsive for mobile screen */
+@media only screen and (max-width: 425px){
+    fieldset div{
+        width: 40%;
+        /* height: 7em; */
+    }
+    fieldset{
+        margin: 10px;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC- SignUp</title>
+    <meta name="keywords" id="keywords" content="embedded projects creator login, embeddedprojectscreator.com, embeddedprojectscreator.in, projects, games, college projects, mechanical projects, cse projects">
+    <meta name="owner" content="Er. Raushan Kumar Gupta">
+    <meta name="author" content="embeddeb projects creator">
+    <meta name="copyright" content="embedded projects creator">
+    <link rel="icon" href="Logo/circle logo.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: fit-content;
+            background-image: linear-gradient(45deg, #000000, #14AEA8);
+        }
+        .container{
+            width: 400px;
+            height: fit-content;
+            margin: 50px auto;
+            border: 2px solid #000000;
+            font-size: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px, -10px -10px 20px;
+        }
+        .container input{
+            width: 80%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 15px;
+        }
+        .container input:last-child{
+            width: 100px;
+            font-size: 18px;
+            margin-top: 25px;
+            padding: 8px;
+            cursor: pointer;
+        }
+    .container div:nth-child(2){
+        padding: 40px;
+    }
+        h1{
+            text-align: center;
+        }
+        h2{
+            font-size: 25px;
+        }
+        @media only screen and (max-width: 425px){
+            .container{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><h1>Sign Up</h1></div>
+        <div>
+            <form onsubmit="user_register()">
+                <h2>Your Name<sup>*</sup></h2>
+                <input type="text" name="Name" required="required" class="show_required" placeholder="Enter Your Full Name"><br><br>
+                <h2>Date of Birth<sup>*</sup></h2>
+                <input type="date" name="DOB" required="required" class="show_required"><br><br>
+                <h2>Email ID<sup>*</sup></h2>
+                <input type="email" name="Email ID" required="required" class="show_required" placeholder="Enter Your Email ID"><br><br>
+                <h2>Mobile No.<sup>*</sup></h2>
+                <input type="number" name="Mobile No." required="required" class="show_required" placeholder="+91 xxxxxxxxxx"><br><br>
+                <h2>Username<sup>*</sup></h2>
+                <input type="text" name="Username" required="required" class="show_required" placeholder="Enter Username"><br><br>
+                <h2>Password<sup>*</sup><span id="show"></span></h2>
+                <input type="password" name="Password" required="required" class="show_required" placeholder="Enter Password" id="password"><br><br>
+                <h2>Confirm Password<sup>*</sup><span id="match"></span></h2>
+                <input type="password" name="Confirm" required="required" class="show_required" placeholder="Enter password again" id="confirmPassword"><br><br>
+                <h6>*required fields</h6>
+                <input type="submit" name="submit" value="Register" >
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
