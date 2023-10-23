@@ -23,7 +23,7 @@ newPassword.onclick = function (){
     disp.style.fontSize ="15px";
     disp.style.color ="#e11010";
 }
-newPassword.oninput = function validPassword(){
+newPassword.oninput = function (){
     const capital = /[A-Z]/g;
     const lower = /[a-z]/g;
     const number = /[0-9]/g;
@@ -47,7 +47,6 @@ newPassword.oninput = function validPassword(){
             disp.innerHTML = "";
         }
     },10);
-    validPassword();
 }
 
 let confirmPassword = document.getElementById("con_pass");
@@ -65,14 +64,15 @@ confirmPassword.oninput = function check(){
 }
 /* End password validation in signup page.*/
 
+//New user registration
 /* Start storeing signup data */
 let signup_frm = document.getElementById("signup_frm");
 var message = document.getElementById("message");
 var checkEmail = document.getElementById("email");
 var emailExist = document.getElementById("exist");
 var reg_btn = document.getElementById("reg_btn");
-checkEmail.onchange = function valid(){
-    var fetchedData = localStorage.getItem(checkEmail.value);
+checkEmail.onchange = function (){
+    var fetchedData = localStorage.getItem(btoa(checkEmail.value));
     if(fetchedData != null ){
         emailExist.style.display = "block";
         emailExist.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Email Id already exist..";
@@ -86,22 +86,30 @@ checkEmail.onchange = function valid(){
             checkEmail.style.border = "none";
             reg_btn.disabled = false;
             reg_btn.style.background = "linear-gradient(45deg, #000000, #14AEA8)";
-            valid();
         }
     }
 }
 signup_frm.onsubmit = function (){
     if(newPassword.value == confirmPassword.value){
         var userData = {
-            name: document.getElementById("name").value,
-            dob: document.getElementById("dob").value,
-            email: document.getElementById("email").value,
-            mobileNumber: document.getElementById("ph").value,
-            userName: document.getElementById("userName").value,
-            password: document.getElementById("newPassword").value,
+            name: btoa(document.getElementById("name").value),
+            dob: btoa(document.getElementById("dob").value),
+            email: btoa(document.getElementById("email").value),
+            mobileNumber: btoa(document.getElementById("ph").value),
+            userName: btoa(document.getElementById("userName").value),
+            password: btoa(document.getElementById("newPassword").value),
         }
     }else{
-        window.alert("Password doesn't match ! Please signup again with same password and confirm password.");
+        var error_msg = document.getElementById("error_msg");
+        error_msg.style.display = "block";
+        error_msg.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Password doesn't match !";
+        error_msg.style.color = "red";
+        confirmPassword.style.border = "2px solid red";
+        confirmPassword.onclick = function (){
+            confirmPassword.value = "";
+            confirmPassword.style.border = "none";
+            error_msg.style.display = "none";
+        }
         return false;
     }
     
@@ -121,19 +129,38 @@ signup_frm.onsubmit = function (){
 /* Start login Authentication with database. */
 let login_frm = document.getElementById("login_frm");
 login_frm.onsubmit = function (){
-    var loginId = document.getElementById("loginId").value;
-    var loginPassword = document.getElementById("loginPassword").value;
+    var loginId = btoa(document.getElementById("loginId").value);
+    var loginPassword = btoa(document.getElementById("loginPassword").value);
     var text_data = localStorage.getItem(loginId);
     var obj_data = JSON.parse(text_data);
     if(localStorage.getItem(loginId) != null){
         if(loginPassword == obj_data.password){
-            window.alert("Welcome back "+obj_data.name+" !");
-            window.location.assign("../index.html");
+            window.alert("Welcome back "+atob(obj_data.name)+" !");
+            window.location.replace("../index.html");
         }else{
-            window.alert("Wrong Password");
+            var wrong_pass = document.getElementById("wrong_pass");
+            wrong_pass.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Wrong Password!";
+            wrong_pass.style.color = "red";
+            loginPassword.style.border = "2px solid red";
+            loginPassword.onclick = function (){
+                loginPassword = "";
+                loginPassword.style.border = "none";
+                wrong_pass.style.display = "none";
+            }
+            return false;
         }
     }else{
-        window.alert("Data not found");
+        var err = document.getElementById("exist");
+        err.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Email id not registered!";
+        err.style.color = "red";
+        loginId.style.border = "2px solid red";
+        loginId.onclick = function (){
+            loginId = "";
+            loginId.style.border = "none";
+            err.style.display = "none";
+        }
+        return false;
     }
+    return false;
 }
 /* End login Authentication with database. */

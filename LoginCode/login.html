@@ -23,9 +23,11 @@
             <h1>Login</h1>
             <form id="login_frm" autocomplete="off">
                 Email ID <br>
-                <input type="email" name="email" required="required" placeholder="Enter email id" id="loginId"><br><br>
+                <input type="email" name="email" required="required" placeholder="Enter email id" id="loginId"><br>
+                <small id="exist"></small><br>
                 Password <br>
                 <input type="password" name="Password" required="required" placeholder="Enter Password" id="loginPassword"><br>
+                <small id="wrong_pass"></small><br>
                 <a href="#">Forget password</a><br><br>
                 <button type="submit" name="submit" >Login</button>
                 <p>Don't have an account? <span id="register">Create account</span><br></p>
@@ -48,7 +50,8 @@
                 Password <sup>*</sup><span id="disp"></span>
                 <input type="password" name="Password" required="required" placeholder="Enter new password" id="newPassword"><br><br>
                 Confirm Password <sup>*</sup><span id="show"></span>
-                <input type="password" name="con_Password" required="required" placeholder="Enter password again" id="con_pass"><br><br>
+                <input type="password" name="con_Password" required="required" placeholder="Enter password again" id="con_pass"><br>
+                <small id="error_msg"></small><br>
                 <h6>* required fields</h6><br>
                 <button type="submit" name="submit" id="reg_btn">Register</button>
                 <p>Already have an account? <span id="signin">Signin</span></p>
