@@ -1,3 +1,6 @@
+// Secure URL
+// history.pushState("null","null","hii wel");
+
 /* Start styling functionality */
 let createAccount_btn = document.getElementById("register");
 let login_box = document.getElementById("login");
@@ -17,7 +20,7 @@ signin_btn.onclick = function (){
 
 /* Start password validation in signup page.*/
 let newPassword = document.getElementById("newPassword");
-var disp = document.getElementById("disp");
+let disp = document.getElementById("disp");
 newPassword.onclick = function (){
     disp.innerHTML = "(minimum 8 digits password contains at least 1 capital letter, 1 small letter, 1 number and 1 special symbol = !@$_)";
     disp.style.fontSize ="15px";
@@ -28,8 +31,8 @@ newPassword.oninput = function (){
     const lower = /[a-z]/g;
     const number = /[0-9]/g;
     const symbol = /[@_$!]/;
-    var pass = newPassword.value;
-    var result = pass.match(capital) && pass.match(lower) && pass.match(number) && pass.match(symbol) && pass.length >= 8 ? "Accepted" : "Not Accepted";
+    let pass = newPassword.value;
+    let result = pass.match(capital) && pass.match(lower) && pass.match(number) && pass.match(symbol) && pass.length >= 8 ? "Accepted" : "Not Accepted";
     disp.innerHTML = result;
     disp.style.fontSize ="15px";
     disp.style.color ="#ffffff";
@@ -50,9 +53,9 @@ newPassword.oninput = function (){
 }
 
 let confirmPassword = document.getElementById("con_pass");
-var show = document.getElementById("show");
+let show = document.getElementById("show");
 confirmPassword.oninput = function check(){
-    var result = newPassword.value == confirmPassword.value ? "Match" : "Doesn't match";
+    let result = newPassword.value == confirmPassword.value ? "Match" : "Doesn't match";
     show.innerHTML = result;
     show.style.color = "red";
     show.style.fontWeight = "bold";
@@ -67,12 +70,12 @@ confirmPassword.oninput = function check(){
 //New user registration
 /* Start storeing signup data */
 let signup_frm = document.getElementById("signup_frm");
-var message = document.getElementById("message");
-var checkEmail = document.getElementById("email");
-var emailExist = document.getElementById("exist");
-var reg_btn = document.getElementById("reg_btn");
+let message = document.getElementById("message");
+let checkEmail = document.getElementById("email");
+let emailExist = document.getElementById("exist");
+let reg_btn = document.getElementById("reg_btn");
 checkEmail.onchange = function (){
-    var fetchedData = localStorage.getItem(btoa(checkEmail.value));
+    let fetchedData = localStorage.getItem(btoa(checkEmail.value));
     if(fetchedData != null ){
         emailExist.style.display = "block";
         emailExist.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Email Id already exist..";
@@ -100,7 +103,7 @@ signup_frm.onsubmit = function (){
             password: btoa(document.getElementById("newPassword").value),
         }
     }else{
-        var error_msg = document.getElementById("error_msg");
+        let error_msg = document.getElementById("error_msg");
         error_msg.style.display = "block";
         error_msg.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Password doesn't match !";
         error_msg.style.color = "red";
@@ -113,7 +116,7 @@ signup_frm.onsubmit = function (){
         return false;
     }
     
-    var text_data = JSON.stringify(userData);
+    let text_data = JSON.stringify(userData);
     localStorage.setItem(userData.email,text_data);
     message.innerHTML = "You Registered Successfully ! Now you can signin.";
     message.style.color = "green";
@@ -129,16 +132,16 @@ signup_frm.onsubmit = function (){
 /* Start login Authentication with database. */
 let login_frm = document.getElementById("login_frm");
 login_frm.onsubmit = function (){
-    var loginId = btoa(document.getElementById("loginId").value);
-    var loginPassword = btoa(document.getElementById("loginPassword").value);
-    var text_data = localStorage.getItem(loginId);
-    var obj_data = JSON.parse(text_data);
+    let loginId = btoa(document.getElementById("loginId").value);
+    let loginPassword = btoa(document.getElementById("loginPassword").value);
+    let text_data = localStorage.getItem(loginId);
+    let obj_data = JSON.parse(text_data);
     if(localStorage.getItem(loginId) != null){
         if(loginPassword == obj_data.password){
-            window.alert("Welcome back "+atob(obj_data.name)+" !");
-            window.location.replace("../index.html");
+            sessionStorage.setItem("userID",loginId);
+            window.location.replace("../Home_Page/homepage.html");
         }else{
-            var wrong_pass = document.getElementById("wrong_pass");
+            let wrong_pass = document.getElementById("wrong_pass");
             wrong_pass.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Wrong Password!";
             wrong_pass.style.color = "red";
             loginPassword.style.border = "2px solid red";
@@ -150,7 +153,7 @@ login_frm.onsubmit = function (){
             return false;
         }
     }else{
-        var err = document.getElementById("exist");
+        let err = document.getElementById("exist");
         err.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Email id not registered!";
         err.style.color = "red";
         loginId.style.border = "2px solid red";
