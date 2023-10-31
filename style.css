@@ -175,7 +175,7 @@ nav a{
     border-radius: 5px;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 30px;
     z-index: 1;
     border: none;
     cursor: pointer;
@@ -212,33 +212,6 @@ section p a{
     font-family: sans-serif;
 }
 
-.content button:hover .SeeMore{
-    /* border: 2px solid red; */    
-    visibility: visible;
-    position: relative;
-    top: -10px;
-    left: -10px;
-    width: 0%;
-    height: 100%;
-    align-items: center;
-    background-color: #efefef;
-    opacity: 0.9;
-    animation-name: SeeMore;
-    animation-duration: 1s;
-    /* animation-direction: reverse;  */
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    
-    /*animation: name duration timing-function delay iteration-count direction fill-mode;  */
-}
-@keyframes SeeMore {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    } 
-} 
 /* End css coding for section element */
 
 /* Start css coding for footer element */
@@ -288,7 +261,6 @@ footer div:nth-child(2){
     .heading h6{
         font-size: 10px;
     }
-    
     nav{
         top: 50px;
         padding: 2px;
@@ -331,7 +303,7 @@ footer div:nth-child(2){
         grid-template-columns: repeat(2,1fr);
     }
     section img{
-        width: 130px;
+        width: 90%;
     }
     section h1{
         font-size: 20px;
