@@ -72,13 +72,15 @@
             <legend>Give Suggestion</legend>
             <form>
                 <textarea name="Suggestion" rows="8" placeholder="Enter your suggestions" id="feedback"></textarea><br>
-                <input type="submit" name="Save" value="Save" onclick="return suggestion()" >
                 <input type="submit" name="Submit" onclick="suggestion_btn()" >
             </form>
         </fieldset>
         <fieldset>
             <legend>Best Suggestion</legend>
-            <p id="feedback-dispaly" >No suggestions</p>
+            <div>
+                <h2 id="userName"></h2>
+                <p id="feedback-dispaly" >No suggestions</p>
+            </div>
         </fieldset>
         
     </section>
