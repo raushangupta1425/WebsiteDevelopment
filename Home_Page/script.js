@@ -60,7 +60,7 @@ window.onload = function (){
 
     let profile_icon = document.getElementById("profile_icon");
     let upload_icon = document.getElementById("upload_icon");
-    if(localStorage.getItem(user_email_id) == null){
+    if(obj_data.profilePic == null){
         profile_icon.style.display = "block";
         upload_icon.style.display = "block";            
         user_icon.style.display = "block";       
