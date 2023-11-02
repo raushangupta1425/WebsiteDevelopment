@@ -4,7 +4,7 @@ let updateBox = document.getElementById("update_box");
 let box_menu = document.getElementById("box_menu");
 let body_area = document.querySelector("body");
 
- user_icon.onclick = function (){
+user_icon.onclick = function (){
     profile_box.style.display = "block";
 }
 body_area.ondblclick = function (){
@@ -39,14 +39,15 @@ if(sessionStorage.getItem(user_email_id) != null){
             let upload_icon = document.getElementById("upload_icon");
             profile_icon.style.display = "none";
             upload_icon.style.display = "none";
-            localStorage.setItem(user_email_id+"image",filename);
+            obj_data.profilePic = filename;
+            localStorage.setItem(user_email_id,JSON.stringify(obj_data));
             location.reload();
         }
     }
 }
 
 window.onload = function (){
-    let fileName = localStorage.getItem(user_email_id+"image");
+    let fileName = obj_data.profilePic;
     let profile_pic_area = document.getElementById("profile_pic");
     let icon_photo = document.getElementById("icon_photo");
 
@@ -59,7 +60,7 @@ window.onload = function (){
 
     let profile_icon = document.getElementById("profile_icon");
     let upload_icon = document.getElementById("upload_icon");
-    if(localStorage.getItem(user_email_id+"image") == null){
+    if(localStorage.getItem(user_email_id) == null){
         profile_icon.style.display = "block";
         upload_icon.style.display = "block";            
         user_icon.style.display = "block";       
@@ -120,7 +121,8 @@ update_pic_insert.onchange = function (){
         let upload_icon = document.getElementById("update_upload_icon");
         profile_icon.style.display = "none";
         upload_icon.style.display = "none";
-        localStorage.setItem(user_email_id+"image",filename);
+        obj_data.profilePic = filename;
+        localStorage.setItem(user_email_id,JSON.stringify(obj_data));
     }
 }
 updateForm.onsubmit = function (){
