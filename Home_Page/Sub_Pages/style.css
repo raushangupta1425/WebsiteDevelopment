@@ -262,6 +262,7 @@ article h3{
 
 /* Start css coding for footer element */
 footer{
+    width: 100%;
     display: flex;
     background-color: #000000;
     flex-wrap: wrap;
