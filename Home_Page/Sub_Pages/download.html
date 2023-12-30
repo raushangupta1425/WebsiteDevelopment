@@ -12,8 +12,94 @@
     <meta name="description" content="Embedded Projects Creator: This channel is trying to provide you each and everything that you should learn as a website developer or software developer.
     And also help you to work on different projects as well as follow up documentation tips to learn something new. And also give you a chance to work on live projects if you selected.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../Logo/circle logo.png" type="image/x-icon">
+    <style>
+        section{
+            height: fit-content;
+        }
+        
+        #downloadTag{
+            height: 80px;
+            display: block;
+            position: relative;
+        }
+        
+        #slider{
+            width: 20%;
+            height: 50px;
+            float: left;
+            background-color: orangered;
+            border-radius: 0 50px 50px 0;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside{
+            width: 15%;
+            height: 80vh;
+            border: 2px solid #cccccc;
+            float: left;
+            margin-top: 20px;
+        }
+
+        aside li{
+            width: 100%;
+            height: 40px;
+            list-style: none;
+            font-family: sans-serif;
+            font-size: 20px;
+            border: 2px solid #cccccc;
+            background-color: #faf9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        aside li:hover{
+            background-color: #cccccc;
+        }
+
+        .container{
+            width: 84%;
+            height: 80vh;
+            float: left;
+            margin: 20px 5px 50px 5px;
+            border: 1px solid #cccccc;
+        }
+
+        .container table{
+            width: 100%;
+            height: fit-content;
+            border: 2px solid #cccccc;
+            border-collapse: collapse;
+        }
+
+        .container td{
+            text-align: center;
+            height: 35px;
+            border: 2px solid #cccccc;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+
+        .container tr:first-child{
+            height: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #faf9f9;
+        }
+
+        .container table a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Start heading coding -->
@@ -65,24 +151,38 @@
     <!-- End navigation bar coding -->
 
     <!-- Start section coding -->
-    <section id="suggestionPage">
-        <marquee direction="right"><h1><font color="red"> Wecome to my channel website. </font></h1></marquee>
-        <a href="https://www.youtube.com/@embeddedprojectscreator4824"><button id="subscribe"><b>SUBSCRIBE</b></button></a>
-        <fieldset>
-            <legend>Give Suggestion</legend>
-            <form>
-                <textarea name="Suggestion" rows="8" placeholder="Enter your suggestions" id="feedback"></textarea><br>
-                <input type="submit" name="Submit" onclick="suggestion_btn()" >
-            </form>
-        </fieldset>
-        <fieldset>
-            <legend>Best Suggestion</legend>
-            <div>
-                <h2 id="userName"></h2>
-                <p id="feedback-dispaly" >No suggestions</p>
-            </div>
-        </fieldset>
-        
+    <section>
+        <div id="downloadTag" class="col-12">
+            <div id="slider" class="animate__animated animate__slideInLeft">Download</div>
+        </div>
+        <aside>
+            <ul>
+                <li>C Notes</li>
+                <li>C++ Notes</li>
+            </ul>
+        </aside>
+        <div class="container">
+            <table>
+                <tr>
+                    <td>S. No.</td>
+                    <td>Course Notes</td>
+                    <td>View</td>
+                    <td>Download</td>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Complete C Notes</td>
+                    <td><a href="../../All_Files/C Programing notes.pdf">view</a></td>
+                    <td><a href="../../All_Files/C Programing notes.pdf" download="Embedded Projects Creator: C Notes">download</a></td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Complete C++ Notes</td>
+                    <td><a href="#">view</a></td>
+                    <td><a href="#" download="Embedded Projects Creator: C++ Notes">download</a></td>
+                </tr>
+            </table>
+        </div>
     </section>
     <!-- End section coding -->
 
@@ -103,8 +203,5 @@
         <div class="col-12" id="copyright"><p> Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2022 Embedded Projects Creator. All rights reserved.</p></div>
     </footer>
     <!-- End footer coding -->
-
-    <!-- link script -->
-    <script src="script.js"></script>
 </body>
 </html>
