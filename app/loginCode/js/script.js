@@ -139,7 +139,7 @@ login_frm.onsubmit = function (){
     if(localStorage.getItem(loginId) != null){
         if(loginPassword == obj_data.password){
             sessionStorage.setItem("userID",loginId);
-            window.location.replace("../Home_Page/homepage.html");
+            window.location.replace("../../home_page/homepage.html");
         }else{
             let wrong_pass = document.getElementById("wrong_pass");
             wrong_pass.innerHTML = "<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Wrong Password!";
