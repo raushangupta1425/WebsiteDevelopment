@@ -1,0 +1,67 @@
+/* Player css coding start */
+
+section div{
+    border: 1px solid #cccccc;
+}
+
+#player video{
+    width: 100%;
+    height: 450px;
+}
+
+#video_name,#description_box{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #ddd;
+}
+
+#video_name p{
+    width: 85%;
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+#video_name button{
+    width: 15%;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: #e40e0e;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+#description_box p{
+    width: 95%;
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+#down_arrow{
+    font-size: 15px;
+    color: #797676;
+}
+
+#description{
+    display: none;
+    width: 95%;
+    height: 100px;
+    padding: 20px;
+}
+
+#description p{
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: #0000dd;
+}
+
+#description a{
+    text-decoration: none;
+}
+

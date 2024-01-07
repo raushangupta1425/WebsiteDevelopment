@@ -1,0 +1,132 @@
+/* download page css start */
+#downloadTag{
+    height: 80px;
+    display: block;
+    position: relative;
+}
+
+#slider{
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: orangered;
+    border-radius: 0 50px 50px 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    font-size: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: fit-content;
+}
+
+aside{
+    width: 15%;
+    height: 80vh;
+    border: 2px solid #cccccc;
+    float: left;
+    margin-top: 20px;
+}
+
+aside li{
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    border: 2px solid #cccccc;
+    background-color: #faf9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+aside li:hover{
+    background-color: #cccccc;
+}
+
+.container{
+    width: 83.7%;
+    height: 80vh;
+    float: left;
+    margin: 20px 5px 50px 5px;
+    border: 1px solid #cccccc;
+}
+
+.container table{
+    width: 100%;
+    height: fit-content;
+    border: 2px solid #cccccc;
+    border-collapse: collapse;
+}
+
+.container td{
+    text-align: center;
+    height: 35px;
+    border: 2px solid #cccccc;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.container tr:first-child{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #faf9f9;
+}
+
+.container table a{
+    text-decoration: none;
+}
+
+/* Responsive coding for mobile screen */
+@media only screen and (max-width: 425px){
+    #downloadTag{
+        height: 5em;
+    }  
+
+    #slider{
+        width: 35%;
+        height: 2em;
+        font-size: 15px;
+    }
+
+    aside{
+        width: 100%;
+        height: 43px;
+        overflow-x: auto;
+    }
+
+    aside li{
+        width: 30%;
+    }
+
+    aside ul{
+        display: flex;
+    }
+
+    .container{
+        width: 97%;
+    }
+    .container table{
+        width: 100%;
+    }
+}
+
+/* Responsive coding for Tablet screen */
+@media only screen and (min-width: 426px ) and (max-width: 768px){
+    #downloadTag{
+        height: 5em;
+    }  
+
+    #slider{
+        width: 25%;
+        height: 2em;
+        font-size: 20px;
+    }
+}

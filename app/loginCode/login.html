@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC - Login</title>
+    <meta name="keywords" id="keywords" content="embedded projects creator login, embeddedprojectscreator.com, embeddedprojectscreator.in, projects, games, college projects, mechanical projects, cse projects">
+    <meta name="owner" content="Er. Raushan Kumar Gupta">
+    <meta name="author" content="embeddeb projects creator">
+    <meta name="copyright" content="embedded projects creator">
+    <link rel="icon" href="../all_files/logo/circle logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../library/animation_code/animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="login" class="animate__animated animate__flipInY">
+            <h1>Login</h1>
+            <form id="login_frm" autocomplete="off">
+                Email ID <br>
+                <input type="email" name="email" required="required" placeholder="Enter email id" id="loginId"><br>
+                <small id="exist"></small><br>
+                Password <br>
+                <input type="password" name="Password" required="required" placeholder="Enter Password" id="loginPassword"><br>
+                <small id="wrong_pass"></small><br>
+                <a href="#">Forget password</a><br><br>
+                <button type="submit" name="submit" >Login</button>
+                <p>Don't have an account? <span id="register">Create account</span><br></p>
+            </form>
+        </div>
+        <div id="signup" class="animate__animated animate__flipInY">
+            <h1>Sign Up</h1>
+            <form id="signup_frm" autocomplete="off">
+                Your Name<sup>*</sup>
+                <input type="text" name="Name" required="required" placeholder="Enter Your Full Name" id="name"><br><br>
+                Date of Birth<sup>*</sup>
+                <input type="date" name="DOB" required="required" id="dob"><br><br>
+                Email ID<sup>*</sup>
+                <input type="email" name="Email_ID" required="required" placeholder="Enter Your Email ID" id="email"><br>
+                <small id="exist"></small><br>
+                Mobile No.<sup>*</sup>
+                <input type="number" name="Mobile_No." required="required" placeholder="+91 xxxxxxxxxx" id="ph"><br><br>
+                Username <sup>*</sup>
+                <input type="text" name="username" required="required" placeholder="Enter Username" id="userName"><br><br>
+                Password <sup>*</sup><span id="disp"></span>
+                <input type="password" name="Password" required="required" placeholder="Enter new password" id="newPassword"><br><br>
+                Confirm Password <sup>*</sup><span id="show"></span>
+                <input type="password" name="con_Password" required="required" placeholder="Enter password again" id="con_pass"><br>
+                <small id="error_msg"></small><br>
+                <h6>* required fields</h6><br>
+                <button type="submit" name="submit" id="reg_btn">Register</button>
+                <p>Already have an account? <span id="signin">Signin</span></p>
+            </form>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
