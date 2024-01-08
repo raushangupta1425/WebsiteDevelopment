@@ -1,9 +1,11 @@
+// Selectors
 let user_icon = document.getElementById("user_icon");
 let profile_box = document.getElementById("profile_box");
 let updateBox = document.getElementById("update_box");
 let box_menu = document.getElementById("box_menu");
 let body_area = document.querySelector("body");
 
+// hide and unhide profile box coding in jQuery
 $(document).ready(function(){
     $("#user_icon").click(function(){
         $("#profile_box").toggle(1000,function(){
@@ -23,19 +25,24 @@ $(document).ready(function(){
 //     updateBox.style.display = "none";
 // }
 
+let count = 0;
+count++;
 let user_email_id = sessionStorage.getItem("userID");
 let text_data = localStorage.getItem(user_email_id);
 let obj_data = JSON.parse(text_data);
 
 if(sessionStorage.getItem(user_email_id) != null){
-    window.location.replace("../LoginCode/login.html");
+    window.location.replace("../loginCode/login.html");
 }else{
     let wlc_msg = document.getElementById("wlc_msg");
     wlc_msg.innerHTML = "Welcome back "+atob(obj_data.name)+" !";
-    setTimeout(function (){
-        wlc_msg.style.display = "none";
-    },3000);
+    if(count == 1){
+        setTimeout(function (){
+            wlc_msg.style.display = "none";
+        },3000);
+    }
 
+    // Profile pic upload first time
     let pic_insert = document.getElementById("pic_insert");
     pic_insert.onchange = function (){
         let reader = new FileReader();
@@ -57,6 +64,7 @@ if(sessionStorage.getItem(user_email_id) != null){
     }
 }
 
+// Fecthing data from storage
 window.onload = function (){
     let fileName = obj_data.profilePic;
     let profile_pic_area = document.getElementById("profile_pic");
@@ -99,6 +107,7 @@ disp_email.innerHTML += atob(obj_data.email);
 disp_ph.innerHTML += atob(obj_data.mobileNumber);
 disp_dob.innerHTML += atob(obj_data.dob);
 
+// Signout coding
 let sign_out = document.getElementById("sign_out");
 sign_out.onclick = function (){
     document.cookie = "name ="+user_email_id+";max-age=0; path=/";
