@@ -7,7 +7,7 @@ let body_area = document.querySelector("body");
 
 // hide and unhide profile box coding in jQuery
 $(document).ready(function(){
-    $("#icon_photo").click(function(){
+    $("#user_icon").click(function(){
         $("#profile_box").toggle(1000,function(){
             if($("#profile_box").css("display") == "block"){
                 $("#profile_box").css("display","block");
@@ -20,10 +20,10 @@ $(document).ready(function(){
 // user_icon.onclick = function (){
 //     profile_box.style.display = "block";
 // }
-// body_area.onclick = function (){
-//     profile_box.style.display = "none";
-//     updateBox.style.display = "none";
-// }
+body_area.onclick = function (){
+    profile_box.style.display = "none";
+    updateBox.style.display = "none";
+}
 
 let user_email_id = sessionStorage.getItem("userID");
 let text_data = localStorage.getItem(user_email_id);
@@ -83,7 +83,7 @@ window.onload = function (){
     }else{
         profile_icon.style.display = "none";
         upload_icon.style.display = "none";
-        user_icon.style.display = "none";
+        user_icon.style.visibility = "hidden";
         pic_insert.style.display = "none";
     }
     icon_photo.onclick = function(){
