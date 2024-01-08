@@ -25,8 +25,6 @@ $(document).ready(function(){
 //     updateBox.style.display = "none";
 // }
 
-let count = 0;
-count++;
 let user_email_id = sessionStorage.getItem("userID");
 let text_data = localStorage.getItem(user_email_id);
 let obj_data = JSON.parse(text_data);
@@ -36,11 +34,9 @@ if(sessionStorage.getItem(user_email_id) != null){
 }else{
     let wlc_msg = document.getElementById("wlc_msg");
     wlc_msg.innerHTML = "Welcome back "+atob(obj_data.name)+" !";
-    if(count == 1){
         setTimeout(function (){
             wlc_msg.style.display = "none";
         },3000);
-    }
 
     // Profile pic upload first time
     let pic_insert = document.getElementById("pic_insert");
