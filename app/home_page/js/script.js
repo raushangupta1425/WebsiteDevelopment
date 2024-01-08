@@ -20,10 +20,10 @@ $(document).ready(function(){
 // user_icon.onclick = function (){
 //     profile_box.style.display = "block";
 // }
-// body_area.onclick = function (){
-//     profile_box.style.display = "none";
-//     updateBox.style.display = "none";
-// }
+body_area.onclick = function (){
+    profile_box.style.display = "none";
+    updateBox.style.display = "none";
+}
 
 let user_email_id = sessionStorage.getItem("userID");
 let text_data = localStorage.getItem(user_email_id);
