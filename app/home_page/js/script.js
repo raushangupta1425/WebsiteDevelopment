@@ -103,7 +103,7 @@ let sign_out = document.getElementById("sign_out");
 sign_out.onclick = function (){
     document.cookie = "name ="+user_email_id+";max-age=0; path=/";
     location.reload(0);
-    window.location.replace("../../index.html");
+    window.location.replace("../../../index.html");
 }
 
 let editBtn = document.getElementById("edit_btn");
