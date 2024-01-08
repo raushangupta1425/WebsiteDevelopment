@@ -6,21 +6,21 @@ let box_menu = document.getElementById("box_menu");
 let body_area = document.querySelector("body");
 
 // hide and unhide profile box coding in jQuery
-$(document).ready(function(){
-    $("#user_icon").click(function(){
-        $("#profile_box").toggle(1000,function(){
-            if($("#profile_box").css("display") == "block"){
-                $("#profile_box").css("display","block");
-            }else{
-                $("#profile_box").css("display","none");
-            }
-        });
-    });
-});
-// user_icon.onclick = function (){
-//     profile_box.style.display = "block";
-// }
-body_area.onclick = function (){
+// $(document).ready(function(){
+//     $("#user_icon").click(function(){
+//         $("#profile_box").toggle(1000,function(){
+//             if($("#profile_box").css("display") == "block"){
+//                 $("#profile_box").css("display","block");
+//             }else{
+//                 $("#profile_box").css("display","none");
+//             }
+//         });
+//     });
+// });
+user_icon.onclick = function (){
+    profile_box.style.display = "block";
+}
+body_area.ondblclick = function (){
     profile_box.style.display = "none";
     updateBox.style.display = "none";
 }
@@ -83,7 +83,7 @@ window.onload = function (){
     }else{
         profile_icon.style.display = "none";
         upload_icon.style.display = "none";
-        user_icon.style.visibility = "hidden";
+        user_icon.style.display = "none";
         pic_insert.style.display = "none";
     }
     icon_photo.onclick = function(){
