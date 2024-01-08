@@ -7,7 +7,7 @@ let body_area = document.querySelector("body");
 
 // hide and unhide profile box coding in jQuery
 $(document).ready(function(){
-    $("#user_icon #icon_photo").click(function(){
+    $("#user_icon","#icon_photo").click(function(){
         $("#profile_box").toggle(1000,function(){
             if($("#profile_box").css("display") == "block"){
                 $("#profile_box").css("display","block");
