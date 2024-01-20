@@ -71,11 +71,9 @@
     <!-- Start section coding -->
     <section>
         <div id="player" class="col-8">
-            <video controls="controls">
-                <source src="#" id="video_src">
-            </video>
+            <iframe id="video_src" src="#" title="EPC video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div id="video_name">
-                <p>Video name</p>
+                <p id="dis_name">Video name</p>
                 <button id="youtube_link">Watch on YouTuube</button>
             </div>
             <div id="description_box">
@@ -86,7 +84,9 @@
                 <p><a href="../download/download.html">Download Notes</a></p>
             </div>
         </div>
-        <div id="lists" class="col-4"></div>
+        <div id="lists" class="col-4">
+            
+        </div>
     </section>
     <!-- End section coding -->
 
