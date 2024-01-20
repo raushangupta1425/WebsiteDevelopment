@@ -5,7 +5,7 @@ let box_menu = document.getElementById("box_menu");
 let body_area = document.querySelector("body");
 
 $(document).ready(function(){
-    $("#user_icon,#icon_photo").click(function(){
+    $("#icon_photo").click(function(){
         $("#profile_box").toggle(1000,function(){
             if($("#profile_box").css("display") == "block"){
                 $("#profile_box").css("display","block");
