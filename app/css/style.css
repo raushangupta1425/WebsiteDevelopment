@@ -197,6 +197,8 @@ section h1{
 }
 section img{
     width: 310px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .container p{
     position: absolute;

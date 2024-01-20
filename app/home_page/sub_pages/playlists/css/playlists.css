@@ -39,8 +39,16 @@
 
 .playlistsBox img{
     width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
+section p{
+    margin: 0 20px 10px 0;
+}
+section p a{
+    text-decoration: none;
+}
 /* Content Page CSS End */
 
 /* Responsive coding for mobile screen */

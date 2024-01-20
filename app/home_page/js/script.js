@@ -1,29 +1,27 @@
-// Selectors
 let user_icon = document.getElementById("user_icon");
 let profile_box = document.getElementById("profile_box");
 let updateBox = document.getElementById("update_box");
 let box_menu = document.getElementById("box_menu");
 let body_area = document.querySelector("body");
 
-// hide and unhide profile box coding in jQuery
-// $(document).ready(function(){
-//     $("#user_icon").click(function(){
-//         $("#profile_box").toggle(1000,function(){
-//             if($("#profile_box").css("display") == "block"){
-//                 $("#profile_box").css("display","block");
-//             }else{
-//                 $("#profile_box").css("display","none");
-//             }
-//         });
-//     });
-// });
-user_icon.onclick = function (){
-    profile_box.style.display = "block";
-}
-body_area.ondblclick = function (){
-    profile_box.style.display = "none";
-    updateBox.style.display = "none";
-}
+$(document).ready(function(){
+    $("#user_icon,#icon_photo").click(function(){
+        $("#profile_box").toggle(1000,function(){
+            if($("#profile_box").css("display") == "block"){
+                $("#profile_box").css("display","block");
+            }else{
+                $("#profile_box").css("display","none");
+            }
+        });
+    });
+});
+// user_icon.onclick = function (){
+//     profile_box.style.display = "block";
+// }
+// body_area.onclick = function (){
+//     profile_box.style.display = "none";
+//     updateBox.style.display = "none";
+// }
 
 let user_email_id = sessionStorage.getItem("userID");
 let text_data = localStorage.getItem(user_email_id);
@@ -34,11 +32,10 @@ if(sessionStorage.getItem(user_email_id) != null){
 }else{
     let wlc_msg = document.getElementById("wlc_msg");
     wlc_msg.innerHTML = "Welcome back "+atob(obj_data.name)+" !";
-        setTimeout(function (){
-            wlc_msg.style.display = "none";
-        },3000);
+    setTimeout(function (){
+        wlc_msg.style.display = "none";
+    },3000);
 
-    // Profile pic upload first time
     let pic_insert = document.getElementById("pic_insert");
     pic_insert.onchange = function (){
         let reader = new FileReader();
@@ -60,7 +57,6 @@ if(sessionStorage.getItem(user_email_id) != null){
     }
 }
 
-// Fecthing data from storage
 window.onload = function (){
     let fileName = obj_data.profilePic;
     let profile_pic_area = document.getElementById("profile_pic");
@@ -103,7 +99,6 @@ disp_email.innerHTML += atob(obj_data.email);
 disp_ph.innerHTML += atob(obj_data.mobileNumber);
 disp_dob.innerHTML += atob(obj_data.dob);
 
-// Signout coding
 let sign_out = document.getElementById("sign_out");
 sign_out.onclick = function (){
     document.cookie = "name ="+user_email_id+";max-age=0; path=/";
@@ -210,4 +205,20 @@ updatePasswordBtn.onclick = function (){
             newPasswordInput.value = "";
         }
     }    
+}
+
+// Player scripting here.
+
+let all_videos = document.getElementsByClassName("video");
+
+for(let i=0; i<all_videos.length; i++){
+        all_videos[i].addEventListener('click',function (){
+                let link = this.getAttribute("link");
+                let yt_btn_link = this.getAttribute("href");
+                let v_name = this.getAttribute("alt");
+                document.location.href = "../home_page/sub_pages/player/player.html";
+                sessionStorage.setItem("youtube",yt_btn_link);
+                sessionStorage.setItem("link",link);
+                sessionStorage.setItem("name",v_name);
+        })
 }
