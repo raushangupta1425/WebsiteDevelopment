@@ -13,3 +13,10 @@ for(let i=0; i<all_videos.length; i++){
                 sessionStorage.setItem("name",v_name);
         })
 }
+
+// let all_videos_links = document.getElementsByClassName("video");
+for(let i=0; i<all_videos.length; i++){
+        localStorage.setItem(all_videos[i].getAttribute("alt")+" Video",all_videos[i].getAttribute("link"));
+        // localStorage.setItem(all_videos[i].getAttribute("alt")+" Image",all_videos[i].getAttribute("src"));
+}
+

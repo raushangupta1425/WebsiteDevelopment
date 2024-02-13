@@ -65,12 +65,41 @@ iframe{
     text-decoration: none;
 }
 
+section{
+    display: flex;
+}
+
+#listsContainer{
+    height: 89.4vh;
+    overflow: scroll;
+}
+.playlists{
+    display: flex;
+    align-items: center;
+    color: #797676;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.playlists img{
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid #5292f3;
+}
+
+.playlists div{
+    border: none;
+}
 @media only screen and (max-width: 576px){
     section{
         display: flex;
         flex-direction: column;
     }
-    #player,#lists{
+    #player,#listsContainer{
         width: 100%;
     }
     #video_name button{
@@ -89,7 +118,7 @@ iframe{
         display: flex;
         flex-direction: column;
     }
-    #player,#lists{
+    #player,#listsContainer{
         width: 100%;
     }
     #video_name button{
