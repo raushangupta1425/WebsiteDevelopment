@@ -14,7 +14,7 @@ for(let i=0; i<all_videos.length; i++){
         })
 }
 
-// let all_videos_links = document.getElementsByClassName("video");
+// Store links for playlist creation in player
 for(let i=0; i<all_videos.length; i++){
         localStorage.setItem(all_videos[i].getAttribute("alt")+" Video",all_videos[i].getAttribute("link"));
         // localStorage.setItem(all_videos[i].getAttribute("alt")+" Image",all_videos[i].getAttribute("src"));

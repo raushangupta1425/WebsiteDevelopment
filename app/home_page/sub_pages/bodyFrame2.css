@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#logo{
+    width: 90px;
+}
+
+#headLines{
+    color: #14AEA8;
+}
+
+#headLines h1{
+    font-size: 32px;
+}
+
+/* Profile box coding here. */
+#icon_photo{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.profile_area{
+    width: 53px;
+    height: 53px;
+}
+
+#profile_box,#update_box{
+    width: 340px;
+    display: none;
+    z-index: 1030;
+}
+
+.icon_frame{
+    width: 120px;
+    height: 120px;
+}
+
+#profile_icon,#update_profile_icon{
+    font-size: 120px;
+    color: #ccc;
+}
+
+#update_upload_icon{
+    font-size: 80px;
+    color: #ccc;
+}
+
+#update_pic_insert,#pic_insert{
+    width: 120px;
+    height: 120px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+/* Navigation bar coding here */
+nav{
+    background-color: #14AEA8;
+    display: flex;
+}
+
+.navbar-nav li a{
+    padding: 4px 15px !important;
+}
+
+.navbar-nav li a:hover{
+    background-color: #30c9c4;
+}
+
+#user_icon_2,.navbar-nav li h1{
+    display: none;
+}
+
+.dropdown-menu{
+    background-color: #14AEA8;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #30c9c4;
+}
+
+.search_box input{
+    outline: none;
+    padding: 4px;
+    padding-left: 40px;
+    background-image: url("../../all_files/logo/searchlogo.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+}
+
+
+/*Responsive for Mobile screen*/
+@media (max-width:576px){
+    #logo{
+        width: 40px;
+    }
+
+    #headLines h1{
+        font-size: 25px;
+    }
+
+    #headLines h6{
+        font-size: 13px;
+    }
+
+    #icon_photo{
+        display: none;
+    }
+
+    #user_icon_2,.navbar-nav li h1{
+        display: block;
+    }
+
+    .navbar-nav li a{
+        padding-left: 15px;
+    }
+
+    .navbar-nav .nav-item:first-child a{       /* li profile section activate*/
+        height: 80px !important;
+        display: flex;
+        align-items: center;
+        font-size: 50px !important;
+        border: none;
+    }
+
+    .search_box{
+        padding-top: 3px !important;
+    }
+    
+    .search_box input{
+        width: 100% !important;
+    }
+}
+
+/*Responsive for Tablet screen*/
+@media (max-width:835px){
+    #icon_photo{
+        display: none;
+    }
+
+    #user_icon_2,.navbar-nav li h1{
+        display: block;
+    }
+
+    .navbar-nav .nav-item:first-child a{       /* li profile section activate*/
+        height: 80px !important;
+        display: flex;
+        align-items: center;
+        font-size: 50px !important;
+        border: none;
+    }
+}
+
+/*Responsive for small screen Laptop*/
+@media (max-width:1200px){
+    .navbar-nav li a{
+        padding: 4px 8px !important;
+    }
+}

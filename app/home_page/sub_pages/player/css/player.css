@@ -94,6 +94,7 @@ section{
 .playlists div{
     border: none;
 }
+
 @media only screen and (max-width: 576px){
     section{
         display: flex;
